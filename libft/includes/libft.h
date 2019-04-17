@@ -16,9 +16,15 @@
 # include <unistd.h>
 # include <string.h>
 
+#ifndef LONG_MAX
 # define LONG_MAX	9223372036854775807
+#endif
+#ifndef LONG_MIN
 # define LONG_MIN	(-LONG_MAX -1L)
+#endif
+#ifndef ULONG_MAX
 # define ULONG_MAX	(LONG_MAX *2UL+1UL)
+#endif
 
 typedef unsigned char	t_byte;
 typedef	struct			s_list
